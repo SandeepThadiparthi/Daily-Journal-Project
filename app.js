@@ -7,11 +7,11 @@ const app = express();
 const _ = require('lodash');
 const mongoose = require("mongoose")
 app.set('view engine', 'ejs');
-mongoose.connect(process.env.URL);
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 require('dotenv').config()
-
+mongoose.connect(process.env.URL);
 const djSchema = {
   title:String,
   post:String
