@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
-require('dotenv').config()
+require('dotenv').config();
 mongoose.connect(process.env.URL);
 const djSchema = {
   title:String,
